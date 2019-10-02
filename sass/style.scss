@@ -4,11 +4,26 @@
 
 @import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
 
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900");
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap&subset=cyrillic');
+
+
+
+$colorBlue: #1F4172;
+$colorPink: #FEBBBB;
+$colorLightPink: #FDF0F0;
+$colorWhite: #FFFFFF;
+
+
+
 * {
+  /*background: $colorWhite;*/
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
 }
 body{
   overflow-x: hidden;
@@ -65,7 +80,8 @@ nav{
   .block_close{
     width: 100%;
     height: 40px;
-    padding: 7px;
+    border-bottom: 1px solid #E6EAEA;
+    padding: 10px 7px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -111,7 +127,15 @@ nav{
             /* -webkit-transition: background 0.3s ease-in-out;*/
             /* -o-transition: background 0.3s ease-in-out;*/
             /* transition: background 0.3s ease-in-out;*/
-            margin-left: 4px;
+           /* margin-left: 4px;*/
+        }
+        span{
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover span{
+          margin-left: 4px;
         }
       }
     }
@@ -137,10 +161,19 @@ nav{
                   transform: rotate(90deg);
         }
       }
+      .accordion-active svg {
+        -webkit-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+      }
       .sub_list_item{
         display: none;
-        padding-left: 20px;
-        background: #febbbb;
+        /*padding-left: 20px;
+        background: #febbbb;*/
+        .item_link{
+          padding-left: 40px;
+          background: #dfe2e1;
+        }
       }
     }
   }
@@ -149,8 +182,7 @@ header{
   width: 100%;
   min-width: 320px;
   height: 70px;
-  /*background: #febbbb;*/
-  background: #ffffff;
+  background: $colorWhite;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -187,7 +219,7 @@ header{
         display: block;
         width: 100%;
         height: 3px;
-        background-color: #fff;
+        background-color: #1F4172;
         -webkit-transition: all .3s;
         -o-transition: all .3s;
         transition: all .3s;
@@ -200,7 +232,7 @@ header{
           top: -9px;
           width: 100%;
           height: 3px;
-          background-color: #fff;
+          background-color: #1F4172;
           -webkit-transition: all .3s;
           -o-transition: all .3s;
           transition: all .3s;
@@ -214,7 +246,7 @@ header{
           top: -9px;
           width: 100%;
           height: 3px;
-          background-color: #fff;
+          background-color: #1F4172;
           -webkit-transition: all .3s;
           -o-transition: all .3s;
           transition: all .3s;
@@ -4101,7 +4133,7 @@ body #wrapper {
 
 
 footer{
-  margin-top:72px;background-color:#f5f5f5;padding-top:66px;padding-bottom:45px
+  margin-top:72px;background-color:$colorWhite;padding-top:66px;padding-bottom:45px
   }
   footer .wrap{display:-webkit-flex;display:-moz-flex;display:-ms-flex;display:-o-flex;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}
   footer .wrap .item{width:25%;}

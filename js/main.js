@@ -1,4 +1,11 @@
-
+$(".empty_link").on("click", function(){
+    $(this).next().slideToggle(300);
+    if($(this).hasClass('accordion-active')){
+      $(this).removeClass('accordion-active');
+    }else{
+      $(this).addClass('accordion-active');
+    }
+  });
 /*------------------
     Hero Slider
   --------------------*/
@@ -38,9 +45,9 @@ $('.set-bg').each(function() {
 
 
 
-$('.cover_sub_list').click(function(){
-  $('.sub_list_item').toggle(); 
-});
+// $('.cover_sub_list').click(function(){
+//   $('.sub_list_item').toggle(); 
+// });
 
 
 
@@ -55,6 +62,20 @@ $('.burger').click(function(){
 $('.burger_close').click(function(){
   $('body').removeClass('nav-sidebar-open');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
