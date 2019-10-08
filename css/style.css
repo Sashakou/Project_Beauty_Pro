@@ -264,7 +264,101 @@ main .slider_block {
   -ms-flex-pack: justify;
   justify-content: space-between; }
   main .slider_block .slider_left {
-    width: 25%; }
+    width: 35%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    main .slider_block .slider_left .category {
+      margin-bottom: 24px; }
+      main .slider_block .slider_left .category small {
+        color: #db0a5b;
+        font-weight: 600;
+        line-height: 19px;
+        font-size: 12px;
+        text-transform: uppercase; }
+    main .slider_block .slider_left h2 {
+      font-weight: 600;
+      line-height: 48px;
+      font-size: 32px; }
+    main .slider_block .slider_left h5 {
+      line-height: 28px;
+      font-size: 16px;
+      letter-spacing: .02em;
+      margin: 40px 0;
+      font-weight: 400;
+      color: #787e90; }
+    main .slider_block .slider_left .price-wrap {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 40px; }
+      main .slider_block .slider_left .price-wrap h2.newprice {
+        font-weight: 600;
+        line-height: 48px;
+        font-size: 32px;
+        margin: 0; }
+        main .slider_block .slider_left .price-wrap h2.newprice span {
+          font-weight: 600;
+          line-height: 48px;
+          font-size: 32px;
+          margin: 0; }
+      main .slider_block .slider_left .price-wrap sup.oldprice {
+        font-weight: 600;
+        line-height: 24px;
+        font-size: 13px;
+        text-transform: uppercase;
+        text-decoration: line-through;
+        color: #787e90;
+        margin-left: 12px;
+        margin-top: -5px; }
+    main .slider_block .slider_left a.btn-b.signup {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: -webkit-max-content;
+      width: -moz-max-content;
+      width: max-content;
+      background-color: #FEBBBB;
+      color: #000;
+      font-weight: 600;
+      line-height: 24px;
+      font-size: 13px;
+      padding: 0 24px;
+      height: 54px;
+      border: none;
+      outline: 0;
+      text-decoration: none;
+      text-transform: uppercase;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      cursor: pointer;
+      -webkit-border-radius: 2px;
+      border-radius: 2px; }
   main .slider_block .slider_right_cover {
     width: 830px;
     position: relative; }
@@ -330,6 +424,12 @@ main .services_section {
       background-color: #fff;
       overflow: hidden;
       margin: 15px;
+      /*-webkit-transform: scale(1);
+            -ms-transform: scale(1);
+                transform: scale(1);*/
+      -webkit-font-smoothing: antialiased;
+      -webkit-transform: perspective(1px) scale(1) translate3d(0, 0, 0);
+      transform: perspective(1px) scale(1) translate3d(0, 0, 0);
       -webkit-transition: all .4s;
       -o-transition: all .4s;
       transition: all .4s; }
@@ -349,9 +449,11 @@ main .services_section {
       main .services_section .project_galery .block_link_img:after {
         bottom: -10px; }
       main .services_section .project_galery .block_link_img:hover {
-        -webkit-transform: scale(1.03);
-        -ms-transform: scale(1.03);
-        transform: scale(1.03);
+        /*-webkit-transform: scale(1.03);
+              -ms-transform: scale(1.03);
+                  transform: scale(1.03);*/
+        -webkit-transform: perspective(1px) scale(1.03) translate3d(0, 0, 0);
+        transform: perspective(1px) scale(1.03) translate3d(0, 0, 0);
         -webkit-box-shadow: 1px 1px 20px 5px #b5b3b3;
         box-shadow: 1px 1px 20px 5px #b5b3b3; }
         main .services_section .project_galery .block_link_img:hover button {
@@ -493,7 +595,14 @@ main .services_section {
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease; }
 
-main .advantages-wrap {
+main .advantages h2 {
+  margin-bottom: 35px;
+  color: #db0a5b; }
+
+main .advantages .advantages_title {
+  margin-bottom: 70px; }
+
+main .advantages .advantages-wrap {
   margin-top: -50px;
   display: -webkit-flex;
   display: -moz-flex;
@@ -513,7 +622,7 @@ main .advantages-wrap {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-  main .advantages-wrap .item {
+  main .advantages .advantages-wrap .item {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flex;
@@ -530,9 +639,10 @@ main .advantages-wrap {
     flex-shrink: 0;
     width: 25%;
     margin-top: 50px; }
-    main .advantages-wrap .item .item__icon {
-      background-color: #f5f5f5;
+    main .advantages .advantages-wrap .item .item__icon {
+      background-color: #FEBBBB;
       width: 54px;
+      min-width: 54px;
       height: 54px;
       -webkit-border-radius: 30px;
       border-radius: 30px;
@@ -551,9 +661,12 @@ main .advantages-wrap {
       -webkit-justify-content: center;
       -ms-flex-pack: center;
       justify-content: center; }
-    main .advantages-wrap .item p {
-      max-width: 200px;
-      margin-left: 32px; }
+      main .advantages .advantages-wrap .item .item__icon svg {
+        width: 37px; }
+    main .advantages .advantages-wrap .item p {
+      /*max-width: 200px;*/
+      margin-left: 32px;
+      color: #787e90; }
 
 .home .slider {
   display: -webkit-flex;
@@ -4083,6 +4196,9 @@ footer .footer-bottom .author a svg {
   -webkit-transition: all .3s;
   -o-transition: all .3s;
   transition: all .3s; }
+
+footer .footer-bottom .author a p {
+  margin-left: 5px; }
 
 footer .footer-bottom .author a:hover {
   color: #292e39; }
